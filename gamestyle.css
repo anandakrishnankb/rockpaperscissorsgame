@@ -1,0 +1,38 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    
+}
+.move-button{
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 60px;
+    background-color: transparent;
+    margin-right: 10px;
+}
+.move-icon{
+    height: 50px;
+}
+.reset-button{
+    border: none;
+    color: black;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    
+
+}
+.resultcard{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.small-move-image{
+height: 50px;
+margin: 0px 10px;
+}
+
+
