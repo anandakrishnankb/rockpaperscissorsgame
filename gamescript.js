@@ -21,17 +21,17 @@ window.addEventListener('load', updateScoreElement);
         function generateResult(chosenMove){
             const randomNum = Math.random();
             if (randomNum < 1/3 && randomNum > 0){
-            computerMove = 'Scissors';
+            computerMove = 'scissors';
             
         
         }
         else if (randomNum >= 1/3 &&  randomNum < 2/3){
-            computerMove = 'Paper';
+            computerMove = 'paper';
            
             
         }
         else{
-            computerMove = 'Rock';
+            computerMove = 'rock';
             
         }
         let a = chosenMove.toLowerCase();
@@ -40,7 +40,7 @@ window.addEventListener('load', updateScoreElement);
             result = 'Tie';
             score.ties+=1;
         }
-        else if (chosenMove === 'rock' && computerMove === 'Scissors' || chosenMove === 'paper' && computerMove === 'Rock' || chosenMove === 'scissors' && computerMove === 'Paper'){
+        else if (chosenMove === 'rock' && computerMove === 'scissors' || chosenMove === 'paper' && computerMove === 'rock' || chosenMove === 'scissors' && computerMove === 'paper'){
             result = 'Win';
             score.wins+=1;
         }
