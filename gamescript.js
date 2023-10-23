@@ -34,12 +34,13 @@ window.addEventListener('load', updateScoreElement);
             computerMove = 'Rock';
             
         }
-        
-        if (chosenMove === computerMove){
+        let a = chosenMove.toLowerCase();
+        let b =computerMove.toLowerCase();
+        if (a === b){
             result = 'Tie';
             score.ties+=1;
         }
-        else if (chosenMove === 'Rock' && computerMove === 'Scissors' || chosenMove === 'Paper' && computerMove === 'Rock' || chosenMove === 'Scissors' && computerMove === 'Paper'){
+        else if (chosenMove === 'rock' && computerMove === 'Scissors' || chosenMove === 'paper' && computerMove === 'Rock' || chosenMove === 'scissors' && computerMove === 'Paper'){
             result = 'Win';
             score.wins+=1;
         }
