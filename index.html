@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Game</title>
+<link rel="stylesheet" href="gamestyle.css"></head>
+<body>
+    <div class="game-container">
+    <h1>Rock Paper Scissors </h1>
+    <button class="move-button" onclick="generateResult('rock');"><img class="move-icon" src="rock-emoji.png" alt=""></button>
+    <button class="move-button" onclick="generateResult('paper');"><img class="move-icon" src="paper-emoji.png" alt=""></button>
+    <button class="move-button" onclick="generateResult('scissors');"><img class="move-icon" src="scissors-emoji.png" alt=""></button>
+    <p class="movecard"></p>
+    <p class="resultcard"></p>
+    <p class="scorecard"></p>
+    <button class="reset-button" onclick="score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+            updateScoreElement();
+            localStorage.removeItem('score');
+    ">ResetScore</button>
+    </div>
+
+
+    <script src="gamescript.js"></script>
+
+</body>
+</html>
