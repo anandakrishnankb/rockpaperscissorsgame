@@ -1,3 +1,6 @@
+
+
+
 window.addEventListener('load', updateScoreElement);
     let score = JSON.parse(localStorage.getItem('score')) || {
             wins: 0,
@@ -83,3 +86,42 @@ window.addEventListener('load', updateScoreElement);
             updateScoreElement(); 
             localStorage.removeItem('score');
     }
+
+    function pickComputerMove() {
+        const randomNumber = Math.random();
+      
+        let computerMove = '';
+      
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = 'rock';
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = 'paper';
+        } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+          computerMove = 'scissors';
+        }
+      
+        return computerMove;
+      }
+      let autoPlayInterval;
+      let isActive = false;
+   function startAutoPlay (){
+    const buttonvalue = document.querySelector('.auto-play').innerHTML;
+
+    if (buttonvalue === 'Auto Play'){
+        document.querySelector('.auto-play').innerHTML = 'Stop Play'
+        isActive = true;
+        autoPlayInterval = setInterval(function () {
+            let chosenMove = pickComputerMove();
+            generateResult(chosenMove);
+        },1000)
+
+    }
+    else{
+        document.querySelector('.auto-play').innerHTML = 'Auto Play';
+        isActive = false;
+        clearInterval(autoPlayInterval);
+        
+    }
+   }
+
+
